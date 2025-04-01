@@ -1,0 +1,15 @@
+[gd_scene load_steps=3 format=3 uid="uid://biiprbnyqxa4w"]
+
+[ext_resource type="Texture2D" uid="uid://cc77vhvh6s6ry" path="res://Sprite-0001.png" id="1_pd3v2"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_xuier"]
+size = Vector2(52, 233)
+
+[node name="Captus-Personaje" type="CharacterBody2D"]
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("1_pd3v2")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(-7, 3.5)
+shape = SubResource("RectangleShape2D_xuier")
