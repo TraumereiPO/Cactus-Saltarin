@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://bqxayupemg0m8"
-path="res://.godot/imported/Tierra 192x64.png-7687357a898bf511908501cf50be6faf.ctex"
+uid="uid://co5h81oql51a7"
+path="res://.godot/imported/cambio de tierra 192x128.png-e85f4e4ac314100acce71ab31a6ff9ea.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Suelo/Tierra 192x64.png"
-dest_files=["res://.godot/imported/Tierra 192x64.png-7687357a898bf511908501cf50be6faf.ctex"]
+source_file="res://Suelo/cambio de tierra 192x128.png"
+dest_files=["res://.godot/imported/cambio de tierra 192x128.png-e85f4e4ac314100acce71ab31a6ff9ea.ctex"]
 
 [params]
 
