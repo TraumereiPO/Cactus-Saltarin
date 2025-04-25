@@ -1,0 +1,33 @@
+[gd_scene load_steps=3 format=3 uid="uid://be3j0si7qnt58"]
+
+[ext_resource type="PackedScene" uid="uid://ciely5f0luycp" path="res://Personaje Principal/character_body_2d.tscn" id="1_utctx"]
+[ext_resource type="Texture2D" uid="uid://ebruu472awi6" path="res://Suelo/cambio de tierra 192x128.png" id="2_73ev3"]
+
+[node name="Level" type="Node2D"]
+
+[node name="CharacterBody2D" parent="." instance=ExtResource("1_utctx")]
+position = Vector2(118, 401)
+
+[node name="CambioDeTierra192x128" type="Sprite2D" parent="."]
+position = Vector2(97, 585)
+texture = ExtResource("2_73ev3")
+
+[node name="CambioDeTierra192x129" type="Sprite2D" parent="."]
+position = Vector2(289, 585)
+texture = ExtResource("2_73ev3")
+
+[node name="CambioDeTierra192x130" type="Sprite2D" parent="."]
+position = Vector2(481, 585)
+texture = ExtResource("2_73ev3")
+
+[node name="CambioDeTierra192x131" type="Sprite2D" parent="."]
+position = Vector2(673, 585)
+texture = ExtResource("2_73ev3")
+
+[node name="CambioDeTierra192x132" type="Sprite2D" parent="."]
+position = Vector2(865, 585)
+texture = ExtResource("2_73ev3")
+
+[node name="CambioDeTierra192x133" type="Sprite2D" parent="."]
+position = Vector2(1057, 585)
+texture = ExtResource("2_73ev3")
