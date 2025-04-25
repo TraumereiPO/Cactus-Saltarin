@@ -10,11 +10,6 @@ config_version=5
 
 [application]
 
-config/name="El_Captus_Saltarin_Godot"
-config/features=PackedStringArray("4.4", "GL Compatibility")
+config/name="Captus_salton"
+config/features=PackedStringArray("4.4", "Forward Plus")
 config/icon="res://icon.svg"
-
-[rendering]
-
-renderer/rendering_method="gl_compatibility"
-renderer/rendering_method.mobile="gl_compatibility"
