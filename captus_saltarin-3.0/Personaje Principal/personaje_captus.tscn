@@ -4,7 +4,7 @@
 [ext_resource type="Texture2D" uid="uid://dp6ubo7uebgs6" path="res://Sprites/Sprite-0001.png" id="2_8yr1q"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_mjbfg"]
-size = Vector2(49, 235)
+size = Vector2(53, 232)
 
 [node name="Personaje-Captus" type="CharacterBody2D"]
 script = ExtResource("1_lvps8")
@@ -13,5 +13,5 @@ script = ExtResource("1_lvps8")
 texture = ExtResource("2_8yr1q")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2(-6.5, 3.5)
+position = Vector2(-7.5, 3)
 shape = SubResource("RectangleShape2D_mjbfg")

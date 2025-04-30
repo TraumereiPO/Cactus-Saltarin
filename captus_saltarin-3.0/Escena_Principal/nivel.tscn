@@ -1,0 +1,39 @@
+[gd_scene load_steps=3 format=3 uid="uid://dm4dujfrxmox3"]
+
+[ext_resource type="PackedScene" uid="uid://cvcfy42j4mi8j" path="res://Personaje Principal/personaje_captus.tscn" id="1_nf61v"]
+[ext_resource type="PackedScene" uid="uid://imb80fdo7jyb" path="res://Suelo/static_body_2d.tscn" id="2_j01yn"]
+
+[node name="Nivel" type="Node2D"]
+
+[node name="Personaje-Captus" parent="." instance=ExtResource("1_nf61v")]
+position = Vector2(124, 392)
+
+[node name="StaticBody2D" parent="." instance=ExtResource("2_j01yn")]
+position = Vector2(96, 584)
+
+[node name="StaticBody2D2" parent="." instance=ExtResource("2_j01yn")]
+position = Vector2(288, 584)
+
+[node name="StaticBody2D3" parent="." instance=ExtResource("2_j01yn")]
+position = Vector2(478, 584)
+
+[node name="StaticBody2D4" parent="." instance=ExtResource("2_j01yn")]
+position = Vector2(666, 584)
+
+[node name="StaticBody2D5" parent="." instance=ExtResource("2_j01yn")]
+position = Vector2(858, 584)
+
+[node name="StaticBody2D6" parent="." instance=ExtResource("2_j01yn")]
+position = Vector2(1050, 584)
+
+[node name="StaticBody2D7" parent="." instance=ExtResource("2_j01yn")]
+position = Vector2(1242, 584)
+
+[node name="StaticBody2D8" parent="." instance=ExtResource("2_j01yn")]
+position = Vector2(1434, 584)
+
+[node name="StaticBody2D9" parent="." instance=ExtResource("2_j01yn")]
+position = Vector2(-94, 584)
+
+[node name="StaticBody2D10" parent="." instance=ExtResource("2_j01yn")]
+position = Vector2(-286, 584)
