@@ -1,44 +1,49 @@
-[gd_scene load_steps=4 format=3 uid="uid://dm4dujfrxmox3"]
+[gd_scene load_steps=5 format=3 uid="uid://dm4dujfrxmox3"]
 
 [ext_resource type="Texture2D" uid="uid://6x4cen5y8gy4" path="res://Sprites/Fondo Nuevo roca 1150x646.png" id="1_j01yn"]
 [ext_resource type="PackedScene" uid="uid://cvcfy42j4mi8j" path="res://Personaje Principal/personaje_captus.tscn" id="1_nf61v"]
 [ext_resource type="PackedScene" uid="uid://imb80fdo7jyb" path="res://Suelo/static_body_2d.tscn" id="2_j01yn"]
+[ext_resource type="PackedScene" uid="uid://c6stxjryxjwlg" path="res://Dinosaurio/rigid_body_2d.tscn" id="4_7ipk8"]
 
 [node name="Nivel" type="Node2D"]
 
 [node name="FondoNuevoRoca1150x646" type="Sprite2D" parent="."]
-position = Vector2(576, 324)
+position = Vector2(576, 324.25)
+scale = Vector2(1.00174, 1.00232)
 texture = ExtResource("1_j01yn")
 
 [node name="Personaje-Captus" parent="." instance=ExtResource("1_nf61v")]
-position = Vector2(124, 392)
+position = Vector2(143, 393)
 
 [node name="StaticBody2D" parent="." instance=ExtResource("2_j01yn")]
-position = Vector2(96, 584)
+position = Vector2(-288, 584)
 
-[node name="StaticBody2D2" parent="." instance=ExtResource("2_j01yn")]
-position = Vector2(288, 584)
+[node name="StaticBody2D2" parent="StaticBody2D" instance=ExtResource("2_j01yn")]
+position = Vector2(192, 0)
 
-[node name="StaticBody2D3" parent="." instance=ExtResource("2_j01yn")]
-position = Vector2(478, 584)
+[node name="StaticBody2D3" parent="StaticBody2D" instance=ExtResource("2_j01yn")]
+position = Vector2(384, 0)
 
-[node name="StaticBody2D4" parent="." instance=ExtResource("2_j01yn")]
-position = Vector2(666, 584)
+[node name="StaticBody2D4" parent="StaticBody2D" instance=ExtResource("2_j01yn")]
+position = Vector2(576, 0)
 
-[node name="StaticBody2D5" parent="." instance=ExtResource("2_j01yn")]
-position = Vector2(858, 584)
+[node name="StaticBody2D5" parent="StaticBody2D" instance=ExtResource("2_j01yn")]
+position = Vector2(768, 0)
 
-[node name="StaticBody2D6" parent="." instance=ExtResource("2_j01yn")]
-position = Vector2(1050, 584)
+[node name="StaticBody2D6" parent="StaticBody2D" instance=ExtResource("2_j01yn")]
+position = Vector2(960, 0)
 
-[node name="StaticBody2D7" parent="." instance=ExtResource("2_j01yn")]
-position = Vector2(1242, 584)
+[node name="StaticBody2D7" parent="StaticBody2D" instance=ExtResource("2_j01yn")]
+position = Vector2(1152, 0)
 
-[node name="StaticBody2D8" parent="." instance=ExtResource("2_j01yn")]
-position = Vector2(1434, 584)
+[node name="StaticBody2D8" parent="StaticBody2D" instance=ExtResource("2_j01yn")]
+position = Vector2(1344, 0)
 
-[node name="StaticBody2D9" parent="." instance=ExtResource("2_j01yn")]
-position = Vector2(-94, 584)
+[node name="StaticBody2D9" parent="StaticBody2D" instance=ExtResource("2_j01yn")]
+position = Vector2(1536, 0)
 
-[node name="StaticBody2D10" parent="." instance=ExtResource("2_j01yn")]
-position = Vector2(-286, 584)
+[node name="StaticBody2D10" parent="StaticBody2D" instance=ExtResource("2_j01yn")]
+position = Vector2(1728, 0)
+
+[node name="RigidBody2D" parent="." instance=ExtResource("4_7ipk8")]
+position = Vector2(1334, 448)

@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://dvie0jde43630"
-path="res://.godot/imported/Sprite-0002.png-3caa6810773128f71c59f2ad0797035e.ctex"
+uid="uid://dl0st0cio2dno"
+path="res://.godot/imported/Dinosaurio_png-150x151.png-bf9b86b77468ecb929056ad9ebcefd4f.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Sprites/Sprite-0002.png"
-dest_files=["res://.godot/imported/Sprite-0002.png-3caa6810773128f71c59f2ad0797035e.ctex"]
+source_file="res://Sprites/Dinosaurio_png-150x151.png"
+dest_files=["res://.godot/imported/Dinosaurio_png-150x151.png-bf9b86b77468ecb929056ad9ebcefd4f.ctex"]
 
 [params]
 

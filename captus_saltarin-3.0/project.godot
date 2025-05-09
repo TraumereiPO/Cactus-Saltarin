@@ -15,6 +15,17 @@ run/main_scene="res://Escena_Principal/nivel.tscn"
 config/features=PackedStringArray("4.4", "GL Compatibility")
 config/icon="res://icon.svg"
 
+[input]
+
+ui_crouch={
+"deadzone": 0.2,
+"events": []
+}
+abajo={
+"deadzone": 0.2,
+"events": []
+}
+
 [rendering]
 
 renderer/rendering_method="gl_compatibility"

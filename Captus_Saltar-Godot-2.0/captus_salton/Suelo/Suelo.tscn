@@ -1,0 +1,15 @@
+[gd_scene load_steps=3 format=3 uid="uid://cci6jiy44lgam"]
+
+[ext_resource type="Texture2D" uid="uid://ebruu472awi6" path="res://Suelo/cambio de tierra 192x128.png" id="1_xkawf"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_0nwe3"]
+size = Vector2(192, 128)
+
+[node name="StaticBody2D" type="StaticBody2D"]
+metadata/_edit_group_ = true
+
+[node name="CambioDeTierra192x128" type="Sprite2D" parent="."]
+texture = ExtResource("1_xkawf")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("RectangleShape2D_0nwe3")
