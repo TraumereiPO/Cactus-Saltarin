@@ -1,0 +1,20 @@
+[gd_scene load_steps=4 format=3 uid="uid://c6lmr4e1t00nb"]
+
+[ext_resource type="Script" uid="uid://ba4iui60lgkev" path="res://meorito_1_body_2d.gd" id="1_vajvt"]
+[ext_resource type="Texture2D" uid="uid://detgoy0vk764b" path="res://Sprites/Sprite-0001_Meteorito-100x100.png" id="2_7wh11"]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_o77rn"]
+radius = 46.3382
+height = 104.538
+
+[node name="Meorito1Body2D" type="CharacterBody2D"]
+script = ExtResource("1_vajvt")
+metadata/_edit_group_ = true
+
+[node name="Sprite-0001Meteorito-100x100" type="Sprite2D" parent="."]
+rotation = 0.388043
+texture = ExtResource("2_7wh11")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+rotation = 1.16232
+shape = SubResource("CapsuleShape2D_o77rn")

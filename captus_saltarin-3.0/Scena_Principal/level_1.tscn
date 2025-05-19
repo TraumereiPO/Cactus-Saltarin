@@ -1,0 +1,49 @@
+[gd_scene load_steps=5 format=3 uid="uid://b220grqny4yt8"]
+
+[ext_resource type="Texture2D" uid="uid://6x4cen5y8gy4" path="res://Sprites/Fondo Nuevo roca 1150x646.png" id="1_ginrs"]
+[ext_resource type="PackedScene" uid="uid://os8oufbo8jf3" path="res://Personaje_Principal-Cactus/personaje_principal.tscn" id="2_76kwi"]
+[ext_resource type="PackedScene" uid="uid://imb80fdo7jyb" path="res://Suelo/static_body_2d.tscn" id="3_v1a4s"]
+[ext_resource type="PackedScene" uid="uid://cdg227sq40alo" path="res://Dinosaurio/dino_body_2d.tscn" id="4_76kwi"]
+
+[node name="Level1" type="Node2D"]
+
+[node name="FondoNuevoRoca1150x646" type="Sprite2D" parent="."]
+position = Vector2(576, 324)
+scale = Vector2(1.00174, 1.0031)
+texture = ExtResource("1_ginrs")
+
+[node name="Personaje_Principal" parent="." instance=ExtResource("2_76kwi")]
+position = Vector2(111, 399)
+
+[node name="StaticBody2D" parent="." instance=ExtResource("3_v1a4s")]
+position = Vector2(-288, 584)
+
+[node name="StaticBody2D2" parent="StaticBody2D" instance=ExtResource("3_v1a4s")]
+position = Vector2(192, 0)
+
+[node name="StaticBody2D3" parent="StaticBody2D" instance=ExtResource("3_v1a4s")]
+position = Vector2(384, 0)
+
+[node name="StaticBody2D4" parent="StaticBody2D" instance=ExtResource("3_v1a4s")]
+position = Vector2(576, 0)
+
+[node name="StaticBody2D5" parent="StaticBody2D" instance=ExtResource("3_v1a4s")]
+position = Vector2(768, 0)
+
+[node name="StaticBody2D6" parent="StaticBody2D" instance=ExtResource("3_v1a4s")]
+position = Vector2(960, 0)
+
+[node name="StaticBody2D7" parent="StaticBody2D" instance=ExtResource("3_v1a4s")]
+position = Vector2(1152, 0)
+
+[node name="StaticBody2D8" parent="StaticBody2D" instance=ExtResource("3_v1a4s")]
+position = Vector2(1344, 0)
+
+[node name="StaticBody2D9" parent="StaticBody2D" instance=ExtResource("3_v1a4s")]
+position = Vector2(1536, 0)
+
+[node name="StaticBody2D10" parent="StaticBody2D" instance=ExtResource("3_v1a4s")]
+position = Vector2(1728, 0)
+
+[node name="DinoBody2D" parent="." instance=ExtResource("4_76kwi")]
+position = Vector2(1265, 449)

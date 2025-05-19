@@ -1,0 +1,42 @@
+[gd_scene load_steps=7 format=3 uid="uid://cdg227sq40alo"]
+
+[ext_resource type="Script" uid="uid://8wktn50oghcd" path="res://dino_body_2d.gd" id="1_pbt83"]
+[ext_resource type="Texture2D" uid="uid://m7uwg7vnbkjx" path="res://Sprites/Dinosaurio_png-150x150.png" id="2_oigak"]
+[ext_resource type="Texture2D" uid="uid://dl0st0cio2dno" path="res://Sprites/Dinosaurio_png-150x151.png" id="3_bepk8"]
+[ext_resource type="Texture2D" uid="uid://dlvjsteq7hv8t" path="res://Sprites/Dinosaurio_png-150x153.png" id="4_m1v8s"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_8rnm5"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2_oigak")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_bepk8")
+}, {
+"duration": 1.0,
+"texture": ExtResource("2_oigak")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_m1v8s")
+}],
+"loop": true,
+"name": &"Run",
+"speed": 20.0
+}]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_ri8qb"]
+size = Vector2(114, 126)
+
+[node name="DinoBody2D" type="CharacterBody2D"]
+script = ExtResource("1_pbt83")
+metadata/_edit_group_ = true
+
+[node name="DinosaurioPng-150x150" type="AnimatedSprite2D" parent="."]
+sprite_frames = SubResource("SpriteFrames_8rnm5")
+animation = &"Run"
+frame_progress = 0.280387
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(-8, 8)
+shape = SubResource("RectangleShape2D_ri8qb")
