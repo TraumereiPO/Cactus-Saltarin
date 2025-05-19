@@ -1,11 +1,13 @@
-[gd_scene load_steps=5 format=3 uid="uid://b220grqny4yt8"]
+[gd_scene load_steps=6 format=3 uid="uid://b220grqny4yt8"]
 
 [ext_resource type="Texture2D" uid="uid://6x4cen5y8gy4" path="res://Sprites/Fondo Nuevo roca 1150x646.png" id="1_ginrs"]
+[ext_resource type="Script" uid="uid://cft1r0vi5n3n5" path="res://Spawuner/spawner.gd" id="1_ibkfi"]
 [ext_resource type="PackedScene" uid="uid://os8oufbo8jf3" path="res://Personaje_Principal-Cactus/personaje_principal.tscn" id="2_76kwi"]
 [ext_resource type="PackedScene" uid="uid://imb80fdo7jyb" path="res://Suelo/static_body_2d.tscn" id="3_v1a4s"]
 [ext_resource type="PackedScene" uid="uid://cdg227sq40alo" path="res://Dinosaurio/dino_body_2d.tscn" id="4_76kwi"]
 
 [node name="Level1" type="Node2D"]
+script = ExtResource("1_ibkfi")
 
 [node name="FondoNuevoRoca1150x646" type="Sprite2D" parent="."]
 position = Vector2(576, 324)
