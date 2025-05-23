@@ -17,4 +17,4 @@ func reduce_life():
 		
 func _game_over():
 	print("¡Juego Terminado!")
-	get_tree().change_scene_to_file("res://Fondo_de_Retorno/pantalla_reinicio.tscn")
+	get_tree().change_scene_to_file("res://Escena_secundaria/reinicio_del_juego.tscn")

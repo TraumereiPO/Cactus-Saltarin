@@ -1,0 +1,17 @@
+[gd_scene load_steps=2 format=3 uid="uid://b7b23uqp3uypt"]
+
+[ext_resource type="Texture2D" uid="uid://gtyowreeglaw" path="res://Sprites/Vida-0001.png" id="1_fnw8p"]
+
+[node name="Hub_Vidas" type="Node2D"]
+
+[node name="Vida-0001" type="Sprite2D" parent="."]
+position = Vector2(974, 78)
+texture = ExtResource("1_fnw8p")
+
+[node name="Vida-0002" type="Sprite2D" parent="."]
+position = Vector2(914, 78)
+texture = ExtResource("1_fnw8p")
+
+[node name="Vida-0003" type="Sprite2D" parent="."]
+position = Vector2(1034, 78)
+texture = ExtResource("1_fnw8p")

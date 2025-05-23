@@ -1,11 +1,18 @@
-[gd_scene load_steps=5 format=3 uid="uid://be3j0si7qnt58"]
+[gd_scene load_steps=7 format=3 uid="uid://be3j0si7qnt58"]
 
+[ext_resource type="Texture2D" uid="uid://l2a7s807c57n" path="res://Sprites/Fondo Nuevo roca 1150x646.png" id="1_87yww"]
 [ext_resource type="PackedScene" uid="uid://ciely5f0luycp" path="res://Personaje Principal/character_body_2d.tscn" id="1_utctx"]
 [ext_resource type="Script" uid="uid://bfli3wu48vk43" path="res://Personaje Principal/character_body_2d.gd" id="2_73ev3"]
 [ext_resource type="PackedScene" uid="uid://cci6jiy44lgam" path="res://Suelo/Suelo.tscn" id="2_utctx"]
 [ext_resource type="PackedScene" uid="uid://bau4k3lnemvq7" path="res://Dinosaurio/character_body_2d.tscn" id="4_8gdp8"]
+[ext_resource type="PackedScene" uid="uid://demsw6ohl5lxn" path="res://Escena_secundaria/vidas.tscn" id="6_uvyyx"]
 
 [node name="Level" type="Node2D"]
+
+[node name="FondoNuevoRoca1150x646" type="Sprite2D" parent="."]
+position = Vector2(577, 321)
+scale = Vector2(1.00174, 1)
+texture = ExtResource("1_87yww")
 
 [node name="CharacterBody2D" parent="." instance=ExtResource("1_utctx")]
 position = Vector2(118, 401)
@@ -43,3 +50,5 @@ position = Vector2(1728, 0)
 
 [node name="CharacterBody2D2" parent="." instance=ExtResource("4_8gdp8")]
 position = Vector2(1298, 449)
+
+[node name="Vidas" parent="." instance=ExtResource("6_uvyyx")]
