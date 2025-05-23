@@ -32,3 +32,4 @@ func _physics_process(delta):
 		animated_sprite.play("Saltar")
 
 	move_and_slide() 
+	

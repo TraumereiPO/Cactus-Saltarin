@@ -10,3 +10,9 @@ func _on_timer_timeout():
 	add_child(dinosaurio_instance)
 	dinosaurio_instance.position = Vector2(800, 400)
 	
+
+extends Node2D
+@onready var hearts = [$"Vida-0001",$"Vida-0002", $"Vida-0003"]
+var lives = 3 
+func update_hearts():
+	for i in range 
