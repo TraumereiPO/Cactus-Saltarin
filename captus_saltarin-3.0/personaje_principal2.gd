@@ -4,14 +4,17 @@ const SPEED = 600.0
 const JUMP_VELOCITY = -900.0
 const GRAVITY = 1600.0
 const CROUCH_OFFSET = 10.0
-@onready var animated_sprite = $AnimatedSprite
-
 var is_crouching = false
 var defauld_position_y
+@onready var animated_sprite = $AnimatedSprite
+@onready var Hub_Vidas = get_node("/res://Scena_Principal/hub_vidas.gd")
+var lives = 3
+
 func _ready():
 	defauld_position_y = position.y
 	animated_sprite.play("reposo")
-
+	$Area2D.connect("body_entered", Callable(self, "_on_body_entered"))
+	
 func _physics_process(delta):
 	# Add the gravity.
 	if not is_on_floor():
@@ -32,3 +35,13 @@ func _physics_process(delta):
 		animated_sprite.play("Saltar")
 
 	move_and_slide() 
+	
+func _on_dinosaour_colision():
+	lives -= 1
+	print("¡El Cactus perdio una vida! Vidas restantes:", lives)
+	Hub_Vidas.reduce_life()
+	if lives <= 0:
+		_game_over()
+func _game_over():
+	print("¡Juego terminado!")
+	get_tree().change_scene_to_file("res://Fondo_de_Retorno/pantalla_reinicio.tscn")

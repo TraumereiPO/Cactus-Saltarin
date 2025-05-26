@@ -1,8 +1,13 @@
 extends CharacterBody2D
+
 const SPEED = -300.0
+@onready var animated_sprite = $AnimatedSprite2D
+func _ready():
+	animated_sprite.play("correr")
 	
 func _physics_process(delta):
 	velocity.x = SPEED
+	
 	move_and_slide() 
 	if position.x < -100:
 		queue_free()

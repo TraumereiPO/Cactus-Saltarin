@@ -1,4 +1,4 @@
-[gd_scene load_steps=7 format=3 uid="uid://cdg227sq40alo"]
+[gd_scene load_steps=8 format=3 uid="uid://cdg227sq40alo"]
 
 [ext_resource type="Script" uid="uid://8wktn50oghcd" path="res://dino_body_2d.gd" id="1_pbt83"]
 [ext_resource type="Texture2D" uid="uid://m7uwg7vnbkjx" path="res://Sprites/Dinosaurio_png-150x150.png" id="2_oigak"]
@@ -28,6 +28,9 @@ animations = [{
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_ri8qb"]
 size = Vector2(114, 126)
 
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_pbt83"]
+size = Vector2(114, 126)
+
 [node name="DinoBody2D" type="CharacterBody2D"]
 script = ExtResource("1_pbt83")
 metadata/_edit_group_ = true
@@ -40,3 +43,11 @@ frame_progress = 0.280387
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2(-8, 8)
 shape = SubResource("RectangleShape2D_ri8qb")
+
+[node name="Area2D" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+position = Vector2(-8, 8)
+shape = SubResource("RectangleShape2D_pbt83")
+
+[connection signal="body_entered" from="Area2D" to="." method="_on_body_entered"]

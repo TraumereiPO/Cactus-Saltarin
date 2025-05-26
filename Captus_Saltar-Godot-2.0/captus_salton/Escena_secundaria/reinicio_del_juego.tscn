@@ -1,0 +1,10 @@
+[gd_scene load_steps=2 format=3 uid="uid://mi6rhuro8c3w"]
+
+[ext_resource type="Texture2D" uid="uid://co30n0cpmfjd6" path="res://Sprites/Fondo_retorno.png" id="1_cc12k"]
+
+[node name="Reinicio_del_Juego" type="Node2D"]
+
+[node name="FondoRetorno" type="Sprite2D" parent="."]
+position = Vector2(576, 324)
+scale = Vector2(1.00174, 1.0031)
+texture = ExtResource("1_cc12k")
