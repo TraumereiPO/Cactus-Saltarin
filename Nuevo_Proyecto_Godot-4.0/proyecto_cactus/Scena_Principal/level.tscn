@@ -1,0 +1,10 @@
+[gd_scene load_steps=2 format=3 uid="uid://s2vg7dekcy51"]
+
+[ext_resource type="Texture2D" uid="uid://cipgjcobd2hrx" path="res://Sprites/Fondo_Principal_1150x646.png" id="1_nfak2"]
+
+[node name="Level" type="Node2D"]
+
+[node name="Fondo_Principal" type="Sprite2D" parent="."]
+position = Vector2(576, 324)
+scale = Vector2(1.00174, 1.0031)
+texture = ExtResource("1_nfak2")

@@ -10,24 +10,11 @@ config_version=5
 
 [application]
 
-config/name="Captus_Saltarin-3.0"
-run/main_scene="uid://b220grqny4yt8"
+config/name="Proyecto_Cactus"
 config/features=PackedStringArray("4.4", "GL Compatibility")
 config/icon="res://icon.svg"
 
-[input]
-
-ui_crouch={
-"deadzone": 0.2,
-"events": []
-}
-abajo={
-"deadzone": 0.2,
-"events": []
-}
-
 [rendering]
 
-textures/canvas_textures/default_texture_filter=0
 renderer/rendering_method="gl_compatibility"
 renderer/rendering_method.mobile="gl_compatibility"

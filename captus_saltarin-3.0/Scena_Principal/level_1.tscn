@@ -1,15 +1,16 @@
-[gd_scene load_steps=8 format=3 uid="uid://b220grqny4yt8"]
+[gd_scene load_steps=9 format=3 uid="uid://b220grqny4yt8"]
 
 [ext_resource type="Texture2D" uid="uid://6x4cen5y8gy4" path="res://Sprites/Fondo Nuevo roca 1150x646.png" id="1_ginrs"]
-[ext_resource type="Script" uid="uid://cft1r0vi5n3n5" path="res://Spawuner/spawner.gd" id="1_ibkfi"]
+[ext_resource type="Script" uid="uid://clxkt50eb1kvy" path="res://Scena_Principal/level_1.gd" id="1_yayoa"]
 [ext_resource type="PackedScene" uid="uid://os8oufbo8jf3" path="res://Personaje_Principal-Cactus/personaje_principal.tscn" id="2_76kwi"]
 [ext_resource type="PackedScene" uid="uid://imb80fdo7jyb" path="res://Suelo/static_body_2d.tscn" id="3_v1a4s"]
 [ext_resource type="PackedScene" uid="uid://cdg227sq40alo" path="res://Dinosaurio/dino_body_2d.tscn" id="4_76kwi"]
 [ext_resource type="Texture2D" uid="uid://gtyowreeglaw" path="res://Sprites/Vida-0001.png" id="5_ibkfi"]
 [ext_resource type="Script" uid="uid://csobnq50jcwui" path="res://Scena_Principal/hub_vidas.gd" id="6_8iobr"]
+[ext_resource type="PackedScene" uid="uid://cr2oe3uwvmwvn" path="res://Dinosaurio/area_2d.tscn" id="7_u0xop"]
 
 [node name="Level1" type="Node2D"]
-script = ExtResource("1_ibkfi")
+script = ExtResource("1_yayoa")
 
 [node name="FondoNuevoRoca1150x646" type="Sprite2D" parent="."]
 position = Vector2(576, 324)
@@ -58,9 +59,6 @@ position = Vector2(2114, 0)
 [node name="StaticBody2D13" parent="StaticBody2D" instance=ExtResource("3_v1a4s")]
 position = Vector2(2307, 0)
 
-[node name="DinoBody2D" parent="." instance=ExtResource("4_76kwi")]
-position = Vector2(1265, 449)
-
 [node name="Hub_Vidas" type="Node2D" parent="."]
 script = ExtResource("6_8iobr")
 
@@ -75,3 +73,12 @@ texture = ExtResource("5_ibkfi")
 [node name="Vida-0003" type="Sprite2D" parent="Hub_Vidas"]
 position = Vector2(1034, 78)
 texture = ExtResource("5_ibkfi")
+
+[node name="DinoMalo" parent="." instance=ExtResource("7_u0xop")]
+position = Vector2(1086, 456)
+
+[node name="DinoBody2D" parent="." instance=ExtResource("4_76kwi")]
+position = Vector2(1329, 449)
+
+[node name="DinoBody2D2" parent="." instance=ExtResource("4_76kwi")]
+position = Vector2(1636, 448)
