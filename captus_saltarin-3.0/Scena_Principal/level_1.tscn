@@ -75,3 +75,6 @@ texture = ExtResource("5_ibkfi")
 [node name="Vida-0003" type="Sprite2D" parent="Hub_Vidas"]
 position = Vector2(1034, 78)
 texture = ExtResource("5_ibkfi")
+
+[node name="DinoBody2D2" parent="." instance=ExtResource("4_76kwi")]
+position = Vector2(1678, 448)
