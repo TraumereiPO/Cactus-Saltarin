@@ -1,0 +1,56 @@
+[gd_scene load_steps=8 format=3 uid="uid://dkcypmeltjpms"]
+
+[ext_resource type="Texture2D" uid="uid://codrvhplh2hu3" path="res://Sprites/abajo-250x250-0002.png" id="1_dm2lt"]
+[ext_resource type="Texture2D" uid="uid://b1oftmtbe3d34" path="res://Sprites/Sprite-0001.png" id="2_sptnm"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_imste"]
+atlas = ExtResource("1_dm2lt")
+region = Rect2(0, 0, 250, 250)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_y4o6h"]
+atlas = ExtResource("2_sptnm")
+region = Rect2(0, 0, 250, 250)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_rghh8"]
+atlas = ExtResource("2_sptnm")
+region = Rect2(0, 0, 250, 250)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_cr60p"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_imste")
+}],
+"loop": true,
+"name": &"abajo",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_y4o6h")
+}],
+"loop": true,
+"name": &"reposo",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_rghh8")
+}],
+"loop": true,
+"name": &"saltar",
+"speed": 5.0
+}]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_fw2um"]
+size = Vector2(52, 232)
+
+[node name="Cactus" type="CharacterBody2D"]
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+sprite_frames = SubResource("SpriteFrames_cr60p")
+animation = &"saltar"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(-7, 3)
+shape = SubResource("RectangleShape2D_fw2um")
