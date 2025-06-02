@@ -1,0 +1,72 @@
+[gd_scene load_steps=12 format=3 uid="uid://b8mt54ie1te0f"]
+
+[ext_resource type="Script" uid="uid://lbrqykx3yiw2" path="res://dinosaurio.gd" id="1_lb3uv"]
+[ext_resource type="Texture2D" uid="uid://bwowyqcs06oex" path="res://Sprites/Dinosaurio_png-150x150.png" id="2_m0hlf"]
+[ext_resource type="Texture2D" uid="uid://biw42iaejidog" path="res://Sprites/Dinosaurio_png-150x151.png" id="3_h7fg5"]
+[ext_resource type="Texture2D" uid="uid://dfacxmpf5r2hd" path="res://Sprites/Dinosaurio_png-150x153.png" id="4_p4ia6"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_1j0su"]
+size = Vector2(78, 101)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_eqo1l"]
+atlas = ExtResource("2_m0hlf")
+region = Rect2(0, 0, 150, 150)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_vl44s"]
+atlas = ExtResource("3_h7fg5")
+region = Rect2(0, 0, 150, 150)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_q8lyj"]
+atlas = ExtResource("2_m0hlf")
+region = Rect2(0, 0, 150, 150)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ugfub"]
+atlas = ExtResource("4_p4ia6")
+region = Rect2(0, 0, 150, 150)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_htuwt"]
+animations = [{
+"frames": [],
+"loop": true,
+"name": &"colisión ",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_eqo1l")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_vl44s")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_q8lyj")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ugfub")
+}],
+"loop": true,
+"name": &"correr",
+"speed": 15.0
+}]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_e6bqx"]
+size = Vector2(78, 101)
+
+[node name="Dinosaurio" type="CharacterBody2D"]
+script = ExtResource("1_lb3uv")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(10, 20.5)
+shape = SubResource("RectangleShape2D_1j0su")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+sprite_frames = SubResource("SpriteFrames_htuwt")
+animation = &"correr"
+autoplay = "correr"
+frame_progress = 0.206165
+
+[node name="Area2D" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+position = Vector2(10, 20.5)
+shape = SubResource("RectangleShape2D_e6bqx")

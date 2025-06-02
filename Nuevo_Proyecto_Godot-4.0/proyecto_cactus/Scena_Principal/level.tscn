@@ -1,6 +1,9 @@
-[gd_scene load_steps=2 format=3 uid="uid://s2vg7dekcy51"]
+[gd_scene load_steps=5 format=3 uid="uid://s2vg7dekcy51"]
 
 [ext_resource type="Texture2D" uid="uid://cipgjcobd2hrx" path="res://Sprites/Fondo_Principal_1150x646.png" id="1_nfak2"]
+[ext_resource type="PackedScene" uid="uid://bu8yhx6etwmtr" path="res://Utileria/tierra.tscn" id="2_7tbxc"]
+[ext_resource type="PackedScene" uid="uid://dkcypmeltjpms" path="res://Personaje_Principal/cactus.tscn" id="3_6ljq4"]
+[ext_resource type="PackedScene" uid="uid://b8mt54ie1te0f" path="res://Villano/dinosaurio.tscn" id="4_6ljq4"]
 
 [node name="Level" type="Node2D"]
 
@@ -8,3 +11,81 @@
 position = Vector2(576, 324)
 scale = Vector2(1.00174, 1.0031)
 texture = ExtResource("1_nfak2")
+
+[node name="Tierra" parent="." instance=ExtResource("2_7tbxc")]
+position = Vector2(-1056, 584)
+
+[node name="Tierra2" parent="Tierra" instance=ExtResource("2_7tbxc")]
+position = Vector2(192, 0)
+
+[node name="Tierra3" parent="Tierra" instance=ExtResource("2_7tbxc")]
+position = Vector2(384, 0)
+
+[node name="Tierra4" parent="Tierra" instance=ExtResource("2_7tbxc")]
+position = Vector2(576, 0)
+
+[node name="Tierra5" parent="Tierra" instance=ExtResource("2_7tbxc")]
+position = Vector2(768, 0)
+
+[node name="Tierra6" parent="Tierra" instance=ExtResource("2_7tbxc")]
+position = Vector2(960, 0)
+
+[node name="Tierra" parent="Tierra" instance=ExtResource("2_7tbxc")]
+position = Vector2(1152, 0)
+
+[node name="Tierra2" parent="Tierra/Tierra" instance=ExtResource("2_7tbxc")]
+position = Vector2(192, 0)
+
+[node name="Tierra3" parent="Tierra/Tierra" instance=ExtResource("2_7tbxc")]
+position = Vector2(384, 0)
+
+[node name="Tierra4" parent="Tierra/Tierra" instance=ExtResource("2_7tbxc")]
+position = Vector2(576, 0)
+
+[node name="Tierra5" parent="Tierra/Tierra" instance=ExtResource("2_7tbxc")]
+position = Vector2(768, 0)
+
+[node name="Tierra6" parent="Tierra/Tierra" instance=ExtResource("2_7tbxc")]
+position = Vector2(960, 0)
+
+[node name="Tierra7" parent="Tierra" instance=ExtResource("2_7tbxc")]
+position = Vector2(2304, 0)
+
+[node name="Tierra2" parent="Tierra/Tierra7" instance=ExtResource("2_7tbxc")]
+position = Vector2(192, 0)
+
+[node name="Tierra3" parent="Tierra/Tierra7" instance=ExtResource("2_7tbxc")]
+position = Vector2(384, 0)
+
+[node name="Tierra4" parent="Tierra/Tierra7" instance=ExtResource("2_7tbxc")]
+position = Vector2(576, 0)
+
+[node name="Tierra5" parent="Tierra/Tierra7" instance=ExtResource("2_7tbxc")]
+position = Vector2(768, 0)
+
+[node name="Tierra6" parent="Tierra/Tierra7" instance=ExtResource("2_7tbxc")]
+position = Vector2(960, 0)
+
+[node name="Tierra" parent="Tierra/Tierra7" instance=ExtResource("2_7tbxc")]
+position = Vector2(1152, 0)
+
+[node name="Tierra2" parent="Tierra/Tierra7/Tierra" instance=ExtResource("2_7tbxc")]
+position = Vector2(192, 0)
+
+[node name="Tierra3" parent="Tierra/Tierra7/Tierra" instance=ExtResource("2_7tbxc")]
+position = Vector2(384, 0)
+
+[node name="Tierra4" parent="Tierra/Tierra7/Tierra" instance=ExtResource("2_7tbxc")]
+position = Vector2(576, 0)
+
+[node name="Tierra5" parent="Tierra/Tierra7/Tierra" instance=ExtResource("2_7tbxc")]
+position = Vector2(768, 0)
+
+[node name="Tierra6" parent="Tierra/Tierra7/Tierra" instance=ExtResource("2_7tbxc")]
+position = Vector2(960, 0)
+
+[node name="Cactus" parent="." instance=ExtResource("3_6ljq4")]
+position = Vector2(113, 401)
+
+[node name="Dinosaurio" parent="." instance=ExtResource("4_6ljq4")]
+position = Vector2(1071, 449)
