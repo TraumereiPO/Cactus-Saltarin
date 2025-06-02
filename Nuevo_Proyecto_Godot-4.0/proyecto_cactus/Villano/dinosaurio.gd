@@ -9,3 +9,10 @@ func _physics_process(delta):
 	if $AnimatedSprite2D.animation != "correr":
 		$AnimatedSprite2D.play("correr")
 	
+func _ready(): #Area de colision: detecta la colision con otros objetos, como el cactus
+	$Area2D.body_entered.connect(_on_area_2d_body_entered) #Asegura que reciba el argumento body
+func _on_area_2d_body_entered(body: Node2D):
+	if body.name == "Cactus":
+		print("colision detectada")
+		
+	
