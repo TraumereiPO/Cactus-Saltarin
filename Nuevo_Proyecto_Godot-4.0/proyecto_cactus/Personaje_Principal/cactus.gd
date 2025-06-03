@@ -1,3 +1,4 @@
+class_name Personaje
 extends CharacterBody2D
 const SPEED = 600.0
 const JUMP_VELOCITY = -900.0
@@ -10,7 +11,6 @@ var defauld_position_y
 func _ready():
 	defauld_position_y = position.y
 	animated_sprite.play("reposo")
-	
 func _physics_process(delta):
 	#condición
 	if not is_on_floor():
@@ -31,3 +31,9 @@ func _physics_process(delta):
 		velocity.y = JUMP_VELOCITY
 		animated_sprite.play("saltar")
 	move_and_slide() 
+
+func _on_area_2d_body_entered(body):
+	if body.name == "Dinosaurio":
+		print("¡El dinosaurio chocó con el cactus!")
+		
+	   

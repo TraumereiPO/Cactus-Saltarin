@@ -1,4 +1,4 @@
-[gd_scene load_steps=9 format=3 uid="uid://b220grqny4yt8"]
+[gd_scene load_steps=8 format=3 uid="uid://b220grqny4yt8"]
 
 [ext_resource type="Texture2D" uid="uid://6x4cen5y8gy4" path="res://Sprites/Fondo Nuevo roca 1150x646.png" id="1_ginrs"]
 [ext_resource type="Script" uid="uid://clxkt50eb1kvy" path="res://Scena_Principal/level_1.gd" id="1_yayoa"]
@@ -7,7 +7,6 @@
 [ext_resource type="PackedScene" uid="uid://cdg227sq40alo" path="res://Dinosaurio/dino_body_2d.tscn" id="4_76kwi"]
 [ext_resource type="Texture2D" uid="uid://gtyowreeglaw" path="res://Sprites/Vida-0001.png" id="5_ibkfi"]
 [ext_resource type="Script" uid="uid://csobnq50jcwui" path="res://Scena_Principal/hub_vidas.gd" id="6_8iobr"]
-[ext_resource type="PackedScene" uid="uid://cr2oe3uwvmwvn" path="res://Dinosaurio/area_2d.tscn" id="7_u0xop"]
 
 [node name="Level1" type="Node2D"]
 script = ExtResource("1_yayoa")
@@ -16,9 +15,6 @@ script = ExtResource("1_yayoa")
 position = Vector2(576, 324)
 scale = Vector2(1.00174, 1.0031)
 texture = ExtResource("1_ginrs")
-
-[node name="Personaje_Principal" parent="." instance=ExtResource("2_76kwi")]
-position = Vector2(111, 399)
 
 [node name="StaticBody2D" parent="." instance=ExtResource("3_v1a4s")]
 position = Vector2(-288, 584)
@@ -59,45 +55,6 @@ position = Vector2(2114, 0)
 [node name="StaticBody2D13" parent="StaticBody2D" instance=ExtResource("3_v1a4s")]
 position = Vector2(2307, 0)
 
-[node name="StaticBody2D2" parent="." instance=ExtResource("3_v1a4s")]
-position = Vector2(2213, 584)
-
-[node name="StaticBody2D2" parent="StaticBody2D2" instance=ExtResource("3_v1a4s")]
-position = Vector2(192, 0)
-
-[node name="StaticBody2D3" parent="StaticBody2D2" instance=ExtResource("3_v1a4s")]
-position = Vector2(384, 0)
-
-[node name="StaticBody2D4" parent="StaticBody2D2" instance=ExtResource("3_v1a4s")]
-position = Vector2(576, 0)
-
-[node name="StaticBody2D5" parent="StaticBody2D2" instance=ExtResource("3_v1a4s")]
-position = Vector2(768, 0)
-
-[node name="StaticBody2D6" parent="StaticBody2D2" instance=ExtResource("3_v1a4s")]
-position = Vector2(960, 0)
-
-[node name="StaticBody2D7" parent="StaticBody2D2" instance=ExtResource("3_v1a4s")]
-position = Vector2(1152, 0)
-
-[node name="StaticBody2D8" parent="StaticBody2D2" instance=ExtResource("3_v1a4s")]
-position = Vector2(1344, 0)
-
-[node name="StaticBody2D9" parent="StaticBody2D2" instance=ExtResource("3_v1a4s")]
-position = Vector2(1536, 0)
-
-[node name="StaticBody2D10" parent="StaticBody2D2" instance=ExtResource("3_v1a4s")]
-position = Vector2(1728, 0)
-
-[node name="StaticBody2D11" parent="StaticBody2D2" instance=ExtResource("3_v1a4s")]
-position = Vector2(1921, 0)
-
-[node name="StaticBody2D12" parent="StaticBody2D2" instance=ExtResource("3_v1a4s")]
-position = Vector2(2114, 0)
-
-[node name="StaticBody2D13" parent="StaticBody2D2" instance=ExtResource("3_v1a4s")]
-position = Vector2(2307, 0)
-
 [node name="Hub_Vidas" type="Node2D" parent="."]
 script = ExtResource("6_8iobr")
 
@@ -113,36 +70,8 @@ texture = ExtResource("5_ibkfi")
 position = Vector2(1034, 78)
 texture = ExtResource("5_ibkfi")
 
-[node name="DinoMalo" parent="." instance=ExtResource("7_u0xop")]
-visible = false
-position = Vector2(1086, 456)
+[node name="Personaje_Principal" parent="." instance=ExtResource("2_76kwi")]
+position = Vector2(135, 400)
 
 [node name="DinoBody2D" parent="." instance=ExtResource("4_76kwi")]
-position = Vector2(1447, 448)
-
-[node name="DinoBody2D2" parent="." instance=ExtResource("4_76kwi")]
-position = Vector2(1829, 449)
-
-[node name="DinoBody2D3" parent="." instance=ExtResource("4_76kwi")]
-position = Vector2(2158, 448)
-
-[node name="DinoBody2D4" parent="." instance=ExtResource("4_76kwi")]
-position = Vector2(2529, 448)
-
-[node name="DinoBody2D5" parent="." instance=ExtResource("4_76kwi")]
-position = Vector2(2939, 449)
-
-[node name="DinoBody2D6" parent="." instance=ExtResource("4_76kwi")]
-position = Vector2(3312, 448)
-
-[node name="DinoBody2D7" parent="." instance=ExtResource("4_76kwi")]
-position = Vector2(3676, 449)
-
-[node name="DinoBody2D8" parent="." instance=ExtResource("4_76kwi")]
-position = Vector2(4154, 449)
-
-[node name="DinoBody2D9" parent="." instance=ExtResource("4_76kwi")]
-position = Vector2(4590, 449)
-
-[node name="DinoBody2D10" parent="." instance=ExtResource("4_76kwi")]
-position = Vector2(1094, 450)
+position = Vector2(1104, 448)

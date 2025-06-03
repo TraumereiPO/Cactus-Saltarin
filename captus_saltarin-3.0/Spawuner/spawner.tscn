@@ -7,3 +7,5 @@ script = ExtResource("1_n5txr")
 metadata/_edit_group_ = true
 
 [node name="Timer" type="Timer" parent="."]
+
+[connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]
