@@ -1,0 +1,29 @@
+[gd_scene load_steps=4 format=3 uid="uid://dqyjwjyis5554"]
+
+[ext_resource type="Texture2D" uid="uid://b4rvcmpp62quv" path="res://Sprites/fondo_retorno 1150x640.png" id="1_8dyin"]
+[ext_resource type="Texture2D" uid="uid://dgxvduqpi1elv" path="res://Sprites/sol 192x1192.png" id="2_cxoot"]
+[ext_resource type="Texture2D" uid="uid://4qum7vjq8ymh" path="res://Sprites/Return-0001.png" id="2_keu8w"]
+
+[node name="PantallaReinicio" type="CanvasLayer"]
+
+[node name="TextureRect" type="TextureRect" parent="."]
+offset_right = 1152.0
+offset_bottom = 704.0
+texture = ExtResource("1_8dyin")
+
+[node name="Sol192x1192" type="Sprite2D" parent="."]
+position = Vector2(592, 345)
+texture = ExtResource("2_cxoot")
+
+[node name="Button" type="Button" parent="."]
+offset_left = 532.0
+offset_top = 306.0
+offset_right = 633.0
+offset_bottom = 409.0
+metadata/_edit_group_ = true
+
+[node name="TextureButton" type="TextureButton" parent="Button"]
+layout_mode = 0
+offset_right = 135.0
+offset_bottom = 130.0
+texture_normal = ExtResource("2_keu8w")

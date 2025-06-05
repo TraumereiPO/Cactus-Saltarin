@@ -1,4 +1,3 @@
-class_name Personaje
 extends CharacterBody2D
 const SPEED = 600.0
 const JUMP_VELOCITY = -900.0
@@ -7,10 +6,12 @@ const CROUCH_OFFSET = 10.0
 var is_crouching = false
 var defauld_position_y
 @onready var animated_sprite = $AnimatedSprite2D
+var Vidas = 3
 
 func _ready():
 	defauld_position_y = position.y
 	animated_sprite.play("reposo")
+	$Area2D.connect("body_entered", Callable(self, "_on_area_2d_body_entered"))
 func _physics_process(delta):
 	#condición
 	if not is_on_floor():
@@ -33,7 +34,10 @@ func _physics_process(delta):
 	move_and_slide() 
 
 func _on_area_2d_body_entered(body):
-	if body.name == "Dinosaurio":
+	if body.is_in_group("jugador"):
 		print("¡El dinosaurio chocó con el cactus!")
-		
+		Vidas -= 1
+		get_node("/root/Level/HUD").actualizar_vidas(Vidas)
+		if Vidas <= 0:
+			queue_free()
 	   

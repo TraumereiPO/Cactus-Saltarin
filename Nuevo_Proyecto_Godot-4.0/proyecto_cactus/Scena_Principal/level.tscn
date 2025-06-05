@@ -1,9 +1,11 @@
-[gd_scene load_steps=5 format=3 uid="uid://s2vg7dekcy51"]
+[gd_scene load_steps=7 format=3 uid="uid://s2vg7dekcy51"]
 
 [ext_resource type="Texture2D" uid="uid://cipgjcobd2hrx" path="res://Sprites/Fondo_Principal_1150x646.png" id="1_nfak2"]
 [ext_resource type="PackedScene" uid="uid://bu8yhx6etwmtr" path="res://Utileria/tierra.tscn" id="2_7tbxc"]
 [ext_resource type="PackedScene" uid="uid://dkcypmeltjpms" path="res://Personaje_Principal/cactus.tscn" id="3_6ljq4"]
 [ext_resource type="PackedScene" uid="uid://b8mt54ie1te0f" path="res://Villano/dinosaurio.tscn" id="4_6ljq4"]
+[ext_resource type="Script" uid="uid://cxfrldlume4jb" path="res://Scena_Principal/hud.Vidas.gd" id="5_lowxo"]
+[ext_resource type="Texture2D" uid="uid://cs8v3c7t5sxgf" path="res://Sprites/Vida_llena-0001.png" id="6_nd12c"]
 
 [node name="Level" type="Node2D"]
 
@@ -88,4 +90,23 @@ position = Vector2(960, 0)
 position = Vector2(113, 401)
 
 [node name="Dinosaurio" parent="." instance=ExtResource("4_6ljq4")]
-position = Vector2(1071, 449)
+position = Vector2(1045, 449)
+
+[node name="HUD" type="CanvasLayer" parent="."]
+script = ExtResource("5_lowxo")
+
+[node name="HBoxContainer" type="HBoxContainer" parent="HUD"]
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="VidaLlena-0001" type="Sprite2D" parent="HUD/HBoxContainer"]
+position = Vector2(972, 72)
+texture = ExtResource("6_nd12c")
+
+[node name="VidaLlena-0002" type="Sprite2D" parent="HUD/HBoxContainer"]
+position = Vector2(1031, 72)
+texture = ExtResource("6_nd12c")
+
+[node name="VidaLlena-0003" type="Sprite2D" parent="HUD/HBoxContainer"]
+position = Vector2(1090, 72)
+texture = ExtResource("6_nd12c")

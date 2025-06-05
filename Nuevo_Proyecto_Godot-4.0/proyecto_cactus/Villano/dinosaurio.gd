@@ -9,9 +9,7 @@ func _physics_process(delta):
 	# Cambia la animación del dinosaurio
 	if $AnimatedSprite2D.animation != "correr":
 		$AnimatedSprite2D.play("correr")
-func _ready(): #Area de colision: detecta la colision con otros objetos, como el cactus
-	$Area2D.body_entered.connect(_on_area_2d_body_entered) #Asegura que reciba el argumento body
+		
+func _ready(): # Dinosaurio pertenece al grupo "Jugador" 
+	add_to_group("jugador") 
 	
-func _on_area_2d_body_entered(body):
-	if body.name == "Cactus":
-		print("colision detectada")
