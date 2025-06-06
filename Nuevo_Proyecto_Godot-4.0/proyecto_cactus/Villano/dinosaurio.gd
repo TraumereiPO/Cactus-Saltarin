@@ -1,13 +1,16 @@
 extends CharacterBody2D
 # Velocidad del dinosaurio
-var speed = 200 #define que tan rapido se movera el dinosaurio
+var speed = 400 # velocidad base
+var direccion = Vector2.LEFT
 @warning_ignore("unused_parameter")
+
 func _physics_process(delta):
-	# Mueve el dinosaurio hacia la izquierda
-	velocity.x = -speed
+	velocity.x = -speed # Mueve el dinosaurio hacia la izquierda
+	velocity = direccion * speed
 	move_and_slide() # Aplica el movimiento de forma fluida
-	# Cambia la animación del dinosaurio
-	if $AnimatedSprite2D.animation != "correr":
+func multiplicar_velocidad(factor):
+	speed *= factor
+	if $AnimatedSprite2D.animation != "correr": # Cambia la animación del dinosaurio
 		$AnimatedSprite2D.play("correr")
 		
 func _ready(): # Dinosaurio pertenece al grupo "Jugador" 

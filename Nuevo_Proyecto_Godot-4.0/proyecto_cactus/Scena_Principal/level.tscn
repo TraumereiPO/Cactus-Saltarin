@@ -1,4 +1,4 @@
-[gd_scene load_steps=7 format=3 uid="uid://s2vg7dekcy51"]
+[gd_scene load_steps=8 format=3 uid="uid://s2vg7dekcy51"]
 
 [ext_resource type="Texture2D" uid="uid://cipgjcobd2hrx" path="res://Sprites/Fondo_Principal_1150x646.png" id="1_nfak2"]
 [ext_resource type="PackedScene" uid="uid://bu8yhx6etwmtr" path="res://Utileria/tierra.tscn" id="2_7tbxc"]
@@ -6,6 +6,7 @@
 [ext_resource type="PackedScene" uid="uid://b8mt54ie1te0f" path="res://Villano/dinosaurio.tscn" id="4_6ljq4"]
 [ext_resource type="Script" uid="uid://cxfrldlume4jb" path="res://Scena_Principal/hud.Vidas.gd" id="5_lowxo"]
 [ext_resource type="Texture2D" uid="uid://cs8v3c7t5sxgf" path="res://Sprites/Vida_llena-0001.png" id="6_nd12c"]
+[ext_resource type="Script" uid="uid://c7f8x5l8tybgc" path="res://Scena_Principal/spawneador_dinosaurios.gd" id="7_nd12c"]
 
 [node name="Level" type="Node2D"]
 
@@ -90,7 +91,7 @@ position = Vector2(960, 0)
 position = Vector2(113, 401)
 
 [node name="Dinosaurio" parent="." instance=ExtResource("4_6ljq4")]
-position = Vector2(1045, 449)
+position = Vector2(1231, 449)
 
 [node name="HUD" type="CanvasLayer" parent="."]
 script = ExtResource("5_lowxo")
@@ -110,3 +111,26 @@ texture = ExtResource("6_nd12c")
 [node name="VidaLlena-0003" type="Sprite2D" parent="HUD/HBoxContainer"]
 position = Vector2(1090, 72)
 texture = ExtResource("6_nd12c")
+
+[node name="TemporizadorJuego" type="Timer" parent="HUD"]
+
+[node name="LabelTiempo" type="Label" parent="HUD"]
+offset_right = 40.0
+offset_bottom = 23.0
+
+[node name="LabelRecord" type="Label" parent="HUD"]
+offset_left = 201.0
+offset_right = 305.0
+offset_bottom = 23.0
+text = "Record: 00.00"
+
+[node name="SpawneadorDinosaurios" type="Node2D" parent="."]
+script = ExtResource("7_nd12c")
+dino_escena = ExtResource("4_6ljq4")
+
+[node name="TimerSpawn" type="Timer" parent="SpawneadorDinosaurios"]
+wait_time = 2.0
+autostart = true
+
+[connection signal="timeout" from="HUD/TemporizadorJuego" to="HUD" method="_on_temporizador_juego_timeout"]
+[connection signal="timeout" from="SpawneadorDinosaurios/TimerSpawn" to="SpawneadorDinosaurios" method="_on_timer_spawn_timeout"]

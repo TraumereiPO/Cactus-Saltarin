@@ -20,6 +20,7 @@ config/icon="res://icon.svg"
 2d_physics/layer_1="Cactus"
 2d_physics/layer_2="dinosaurio"
 2d_physics/layer_3="meteorito"
+2d_physics/layer_4="tierra"
 
 [rendering]
 

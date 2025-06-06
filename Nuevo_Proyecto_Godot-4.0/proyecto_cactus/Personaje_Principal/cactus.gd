@@ -1,8 +1,9 @@
 extends CharacterBody2D
-const SPEED = 600.0
-const JUMP_VELOCITY = -900.0
-const GRAVITY = 1600.0
+const SPEED = -600.0 # Velocidad de salto
+const JUMP_VELOCITY = -900.0 # Altura de salto
+const GRAVITY = 2000.0 # Aumentar la gravedad para que caiga más rápido
 const CROUCH_OFFSET = 10.0
+var velocidad = Vector2.ZERO
 var is_crouching = false
 var defauld_position_y
 @onready var animated_sprite = $AnimatedSprite2D
@@ -35,9 +36,10 @@ func _physics_process(delta):
 
 func _on_area_2d_body_entered(body):
 	if body.is_in_group("jugador"):
-		print("¡El dinosaurio chocó con el cactus!")
-		Vidas -= 1
-		get_node("/root/Level/HUD").actualizar_vidas(Vidas)
+		Vidas -= 1 # le quita una vida al cactus cuando un dinosaurio lo atraviesa
+		get_node("/root/Level/HUD").actualizar_vidas(Vidas) #Actualiza el estado de las vidas por las vacias
 		if Vidas <= 0:
-			queue_free()
-	   
+			if not get_tree().current_scene.has_node("PantallaReinicio"):
+				var reinicio = load("res://UI/pantalla_reinicio.tscn").instantiate()
+				reinicio.name = "PantallaReinicio"
+				get_tree().current_scene.add_child(reinicio)

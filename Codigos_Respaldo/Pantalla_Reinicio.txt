@@ -1,0 +1,7 @@
+extends CanvasLayer
+
+func _on_button_pressed():
+	self.queue_free()#eliminar la pantalla de reinicio si quedara colgada
+	var nueva_escena = load("res://Scena_Principal/level.tscn")# Cargar la escena principal correctamente
+	get_tree().change_scene_to_packed(nueva_escena)
+	

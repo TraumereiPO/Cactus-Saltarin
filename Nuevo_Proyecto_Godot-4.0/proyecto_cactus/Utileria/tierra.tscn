@@ -6,6 +6,8 @@
 size = Vector2(192, 128)
 
 [node name="Tierra" type="StaticBody2D"]
+collision_layer = 11
+collision_mask = 11
 
 [node name="CambioDeTierra192x128" type="Sprite2D" parent="."]
 texture = ExtResource("1_nffdt")

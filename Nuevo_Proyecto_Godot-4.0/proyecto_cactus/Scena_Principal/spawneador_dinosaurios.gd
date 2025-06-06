@@ -7,4 +7,3 @@ func _on_timer_spawn_timeout(): # Genera nuevos enemigos
 	var nuevo_dino = dino_escena.instantiate()
 	get_parent().add_child(nuevo_dino)
 	nuevo_dino.global_position = posicion_spawn
-
