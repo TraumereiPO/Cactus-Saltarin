@@ -11,7 +11,7 @@ config_version=5
 [application]
 
 config/name="Proyecto_Cactus"
-run/main_scene="uid://s2vg7dekcy51"
+run/main_scene="uid://b07yx2qklmb6s"
 config/features=PackedStringArray("4.4", "GL Compatibility")
 config/icon="res://icon.svg"
 

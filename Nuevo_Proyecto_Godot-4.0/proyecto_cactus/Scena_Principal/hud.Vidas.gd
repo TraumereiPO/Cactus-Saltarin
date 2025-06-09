@@ -6,8 +6,9 @@ var record_tiempo = 0
 var velocidad_acelerada_aplicada = false
 # llama a los nodos hijos label y timer para ser usados en el codigo
 @onready var label_tiempo = $LabelTiempo
-@onready var timer = $TemporizadorJuego
 @onready var label_record = $LabelRecord
+@onready var timer = $TemporizadorJuego
+
 func _ready():
 	cargar_record()
 	timer.start()
@@ -25,16 +26,15 @@ func actualizar_vidas(cantidad): #Cuando se le resta una vida, actualiza su esta
 			sprite.texture = corazon_vacio
 			
 func _on_temporizador_juego_timeout(): # Temporizador
-	tiempo_jugado += 1 # le suma uno al contador que inicia en cero
-	actualizar_label() # se actualiza el label
+	tiempo_jugado += 1 # suma un segundo cada vez que el temporizador hace "timeout".
 	
-	if tiempo_jugado > record_tiempo: # El tiempojugado se guarda en la variable de record
+	if tiempo_jugado > record_tiempo:
 		record_tiempo = tiempo_jugado
-		if not velocidad_acelerada_aplicada and record_tiempo - tiempo_jugado <= 10:
+		guardar_record() # se guarda el nuevo récord siempre que lo superes.
+		if not velocidad_acelerada_aplicada:
 			velocidad_acelerada_aplicada = true
-			acelerar_dinosaurios()
-			guardar_record()
-	
+			acelerar_dinosaurios() # solo se llama una vez, cuando superas el récord por primera vez.
+	actualizar_label() # muestra el nuevo tiempo en pantalla.
 func actualizar_label():
 	var minutos = tiempo_jugado / 60 
 	var segundos = tiempo_jugado % 60
@@ -46,7 +46,6 @@ func guardar_record():
 	var file = FileAccess.open("user://record.save", FileAccess.WRITE)
 	file.store_32(record_tiempo)
 	file.close()
-
 func cargar_record():
 	if FileAccess.file_exists("user://record.save"):
 		var file = FileAccess.open("user://record.save", FileAccess.READ)

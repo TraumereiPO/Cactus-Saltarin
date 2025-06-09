@@ -1,8 +1,9 @@
-[gd_scene load_steps=4 format=3 uid="uid://dqyjwjyis5554"]
+[gd_scene load_steps=5 format=3 uid="uid://dqyjwjyis5554"]
 
 [ext_resource type="Texture2D" uid="uid://b4rvcmpp62quv" path="res://Sprites/fondo_retorno 1150x640.png" id="1_8dyin"]
 [ext_resource type="Script" uid="uid://qwliqg6384l7" path="res://UI/pantalla_reinicio.gd" id="1_keu8w"]
 [ext_resource type="Texture2D" uid="uid://cu7lh13ojk8d4" path="res://Sprites/Retorno-0001.png" id="2_8dyin"]
+[ext_resource type="Texture2D" uid="uid://cwm0udryk2ip6" path="res://Sprites/e32a69b7-ad5f-4e3a-8e50-4b5c3e85c820.png" id="4_cxoot"]
 
 [node name="PantallaReinicio" type="CanvasLayer"]
 script = ExtResource("1_keu8w")
@@ -19,5 +20,10 @@ offset_right = 633.0
 offset_bottom = 409.0
 icon = ExtResource("2_8dyin")
 metadata/_edit_group_ = true
+
+[node name="E32a69b7-ad5f-4e3a-8e50-4b5c3e85c820" type="Sprite2D" parent="."]
+position = Vector2(570, 177.25)
+scale = Vector2(0.707031, 0.440918)
+texture = ExtResource("4_cxoot")
 
 [connection signal="pressed" from="Button" to="." method="_on_button_pressed"]
